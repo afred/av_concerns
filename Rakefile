@@ -7,3 +7,5 @@ end
 load 'rails/tasks/statistics.rake'
 
 Bundler::GemHelper.install_tasks
+
+require 'engine_cart/rake_task'
