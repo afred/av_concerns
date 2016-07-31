@@ -9,14 +9,14 @@ Gem::Specification.new do |s|
   s.version     = AvConcerns::VERSION
   s.authors     = ["Andrew Myers"]
   s.email       = ["afredmyers@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of AvConcerns."
-  s.description = "TODO: Description of AvConcerns."
+  s.summary     = "Summary of AvConcerns."
+  s.description = "Description of AvConcerns."
   s.license     = "MIT"
 
-  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   s.add_dependency "rails", "~> 4.2.7"
 
   s.add_development_dependency "sqlite3"
+  s.add_development_dependency 'rspec-rails'
 end
