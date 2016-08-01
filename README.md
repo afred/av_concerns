@@ -16,3 +16,6 @@
   1. Build test app with `bundle exec rake engine_cart:generate`. **This worked for me. No problems so far.**
 1. Add `curation_concerns` as a dependency in `av_concerns.gemspec`
   > NOTE: Attempting to run `bundle exec rake engine_cart:generate` here, to regenerate the app with the new bundle dependency did not work, claiming `Could not find gem 'curation_concerns (~> 1.2.0) ruby'`. Had to run `bundle install` explicitly from the engine root.
+1. Use EngineCart's test app when running rspec tests.
+  1. Add RSpec's rake task `:spec`
+  1. Add 'engine_cart:generate' as a prerequisite for `:spec`
