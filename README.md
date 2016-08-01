@@ -1,4 +1,4 @@
-= AvConcerns
+# Building AVConcerns - an example engine for Hydradam
 
 1. Generate engine using: `rails plugin new AVConcerns --mountable --skip-test-unit`.
 1. Adds rspec as dev dependency in `av_concerns.gemspec`. Also...
@@ -13,3 +13,6 @@
   1. Run `bundle install`.
   1. require 'engine_cart/rake_task' in engine's `Rakefile`
   1. Run `bundle exec engine_cart:prepare`.
+  1. Build test app with `bundle exec rake engine_cart:generate`. **This worked for me. No problems so far.**
+1. Add `curation_concerns` as a dependency in `av_concerns.gemspec`
+  > NOTE: Attempting to run `bundle exec rake engine_cart:generate` here, to regenerate the app with the new bundle dependency did not work, claiming `Could not find gem 'curation_concerns (~> 1.2.0) ruby'`. Had to run `bundle install` explicitly from the engine root.
