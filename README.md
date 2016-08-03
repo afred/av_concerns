@@ -45,3 +45,7 @@
   1. Add `require "curation_concerns"` in `lib/av_concerns.rb`. **This is key - the test app will fail to build without this.**
 
   1. At this point running `rake spec` should spin up a bare-bones CurationConcerns app for testing, and run all your tests (of which there are probably none).
+
+1. Run the engine's installer when generating EngineCart test app
+
+  1. Create a generator for the engine, with at least one method that you can verify has run. More methods for setting up a full installation will come later.
