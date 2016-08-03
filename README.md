@@ -49,3 +49,13 @@
 1. Run the engine's installer when generating EngineCart test app
 
   1. Create a generator for the engine, with at least one method that you can verify has run. More methods for setting up a full installation will come later.
+
+1. Build out the engine's installer
+
+  1. Add a test to check the FileSet object for methods that come from the module AvConcerns::FileSetBehaviors::hasFfprobe. Run the tests and watch it fail.
+
+  1. Add the AvConcerns::FileSetBehavior::hasFfprobe module to the engine.
+
+  1. Add the code to the install generator to include the AvConcerns::FileSetBehavior::hasFfprobe module.
+
+  1. The tests should pass. Make it so.
