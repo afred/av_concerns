@@ -40,4 +40,8 @@
 
 1. Run CurationConcerns installer when generating EngineCart test app.
 
-  **STUCK HERE** I'm getting errors `Uninitialized constant "Blacklight"` in the test app's `routes.rb` files. So Blacklight isn't getting loaded. But I'm guessing it's not a Blacklight problem, but rather some kind of autoload problem.
+  1. Add method `TestAppGenerator#install_curation_concerns `in `spec/test_app_templates/lib/generators/test_app_generator.rb`.
+
+  1. Add `require "curation_concerns"` in `lib/av_concerns.rb`. **This is key - the test app will fail to build without this.**
+
+  1. At this point running `rake spec` should spin up a bare-bones CurationConcerns app for testing, and run all your tests (of which there are probably none).
